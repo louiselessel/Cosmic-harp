@@ -32,7 +32,7 @@ Starting up the installation
 ```console
     cd path../ThingsInSpace_midi_lat-lon
     python -m http.server 8000
-    ```
+```
 
 2. In Google Chrome:
     http://localhost:8000
