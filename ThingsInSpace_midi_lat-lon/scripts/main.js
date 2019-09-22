@@ -68,7 +68,7 @@ var arrayAboveNY = []; // sats from lat lon
 var smallest = 2;
 var largest = -1;
 
-var timeInterval = 15000;
+var timeInterval = 5000;
 
 $(document).ready(function() {
   var opts = {
@@ -347,6 +347,7 @@ function sendMidi(ratio) {
   var mappedVel = ratio * 127;
   console.log("sending ratio as control change: " + mappedVel);
   output.sendControlChange(3, mappedVel, 1);
+  //output.playNote("Gb2", 10, {duration: 2000, velocity: 0.25});
 
   /*
   if (lastAmountofSats < arrayOfSats.length) {

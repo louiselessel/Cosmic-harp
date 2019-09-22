@@ -1,11 +1,12 @@
 Things in Space
 ===============
+Revised code by Louise Lessel.
+Takes a latitude and longtitude on earth, and a diameter in kilometers,
+and views into space to find the satellites that are above you right now.
+
 Forked from ajmas (https://github.com/ajmas/ThingsInSpace)
-
 Original author: James Yoder (https://github.com/jeyoder)
-
 A real-time interactive WebGL visualisation of objects in Earth orbit
-
 The official live version is hosted at http://stuffin.space/
 
 Installation
@@ -32,16 +33,19 @@ login and then you can use the following URL:
 
 https://www.space-track.org/basicspacedata/query/class/tle_latest/ORDINAL/1/EPOCH/%3Enow-30/orderby/NORAD_CAT_ID/format/json
 
+Paste the newwest data into the TLS.json file, inside the data folder.
+
 
 Starting up the installation
 ----------------
-In terminal:
+
+1. In terminal:
     cd path../ThingsInSpace_midi_lat-lon
     python -m http.server 8000
 
-In Google Chrome:
+2. In Google Chrome:
     http://localhost:8000
     
-Open Max file for data handling from webmidi (passes this on to Ableton)
+3. Open Max file for data handling from webmidi (passes this on to Ableton)
 
-Open Ableton file for sound
+4. Open Ableton file for sound (the data drives a distortion on the sound)

@@ -1526,7 +1526,7 @@ var arrayAboveNY = []; // sats from lat lon
 var smallest = 2;
 var largest = -1;
 
-var timeInterval = 15000;
+var timeInterval = 5000;
 
 $(document).ready(function() {
   var opts = {
@@ -1725,7 +1725,7 @@ window.setInterval(function(){
   //console.log("main got this array: " + arrayAboveNY);
   console.log("main lenght: " + arrayAboveNY.length);
   console.log("main 0 id : " + arrayAboveNY[0].satId);
-  console.log("main 0 : " + arrayAboveNY[0]);
+  //console.log("main 0 : " + arrayAboveNY[0]);
   calculateSound();
 
 }, timeInterval); // how often to check for new satellites
@@ -1794,6 +1794,7 @@ function calculateSound() {
     console.log("smallest: " + smallest + ", " + "largest: " + largest);
 
     console.log("debris ratio: " + sound_DebrisRatio);
+    // square the ratio to make a bigger audible difference
     var squaredRatio = sound_DebrisRatio*sound_DebrisRatio;
     console.log("squared ratio: " + squaredRatio);
     sendMidi(squaredRatio);
@@ -1804,6 +1805,7 @@ function sendMidi(ratio) {
   var mappedVel = ratio * 127;
   console.log("sending ratio as control change: " + mappedVel);
   output.sendControlChange(3, mappedVel, 1);
+  //output.playNote("Gb2", 10, {duration: 2000, velocity: 0.25});
 
   /*
   if (lastAmountofSats < arrayOfSats.length) {
