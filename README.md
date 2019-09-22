@@ -12,7 +12,7 @@ Space-track.org is managed by the U.S. Strategic Command to provide Space Situat
 
 
 Code from Things in Space, to fetch satellite data
-===============
+----------------
 Revised code by Louise Lessel.
 Takes a latitude and longtitude on earth, and a diameter in kilometers,
 and views into space to find the satellites that are above you right now.
